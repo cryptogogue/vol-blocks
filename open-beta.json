@@ -9,8 +9,8 @@
 
                 "identity" :                    "VOLITION_TEST_NET",
                 "maxBlockWeight" :              1024,
-                "blockDelayInSeconds" :         1,
-                "rewriteWindowInSeconds" :      30,
+                "blockDelayInSeconds" :         30,
+                "rewriteWindowInSeconds" :      300,
 
                 "accounts" : [
                     {
@@ -21,7 +21,7 @@
                             "type" : "EC_PEM"
                         },
                         "minerInfo": {
-                            "url" :             "http:\/\/127.0.0.1:9090",
+                            "url" :             "https:\/\/vol9090.fgcdev.com",
                             "key" : {
                                 "publicKey" : "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAuMpcfQ3yIVFB1qB+3K\/d5nNyJCT1xqz+05luZSdXr0MLqszP52v8\n1NsS+9VemmPwvyvMjE+00hLTiS1RqysjPQxY8+nndotFeWjg1IJEOylUPDLtAWPY\nBF2h3KfniI675mEzJqTMHM9BnPnnXKjhRdxG6bBWkRmtb9uVUevmg5Mgu07Ncg\/A\ndtJHDS3Djc+b5hfXGU5DcO8NCSzeBHvwuQyEPx9OFkF9q1In9cOrs4OR2yaaalLY\nc9F+nMZxnv2PTeY18iYV03WUgzU35eafYTyanTSZSPKDpx3\/6JcIwt6u5gmCuQHU\nhlASmDXr1znVG5vVW4n5HcyNX+jfV5QIjnNx0q3edR6ii59nmxsqf7WwMDpMzuKM\nvt42fwrVdjO3fEK3gXOBBc+i84lGx7SrL44NHuUHcWv72UfCKCKNr+t\/HNUVmWN+\nqx2kOUGHcrXWWZYIybjjgrt7I4CQiSr1logrHh8SVM\/9XTBJEOuKTwBdpAwLdvlk\n90kCwVX7nK2s9YGx7WytZ92n3bNXkC37fg9WIPxsKBzitgZzxdde4Mp9s9SoLWII\n3K0Eowg7Ov7z099BHxk\/CKI\/zbZwy9liGwkhAykR\/8iViijmsqGTqVTsH9bYD8br\nCkBNYuZrJYjvIT1mTGn1roUQxR4kZmIWX5jpWLxanK1DFmUnKJlUOn0CAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
                                 "type" : "RSA_PEM"
@@ -41,7 +41,7 @@
                             "publicKey" : "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEAkeYtzyK6I9BNjB5MOBfbO7\/EAK1orGj\nzicNsAWY5t+6tDB9MY\/1datWY5LKOfmWZxmn58VE+K4XZCSQWa\/nZg==\n-----END PUBLIC KEY-----\n"
                         },
                         "minerInfo": {
-                            "url" :             "http:\/\/127.0.0.1:9091",
+                            "url" :             "https:\/\/vol9091.fgcdev.com",
                             "key" : {
                                 "publicKey" : "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAvxAJvdSZLPUnkRnj7InUCFWuCUaLz7O604mONQtCUotvUmoAEZJo\nGSvjQ4nRNhPYWvKx3oOWEgrW1JkmAzd9V2dviVMQLGKYYqZ1nMabxBlzdC9ueNFI\n+wkNFemU5fUXc8VAMU0++ZyB1jCamPhp+\/Kw4v0xbl50BQE+i1qv8pGgj2wz\/toS\nuSbAb3GtyWUAxusxCeCFYvO7ho11AQ8hxKRJG2n+rCQ14JlMIs8saxcWBUCyZger\ni8xzwZcfkux8WxnMe\/n99KRXkVZY88si8\/0c9oZiRn5qwVl28O22\/Fyd4v9x6V5j\nw0oBL+Sv5GQ12RTmrqLknUviZT+v0PpQHlfG03SdsoK+OZ9\/Buwvms9UxzXjFfax\n+xnVUH63QvFubHGTp5DXfDbSmsGL+ANWegGtG0fAGSjeuUC8FerbMHSYQ4irmZCl\n9LxL6TkKoCOp2KQLzNVg2php\/h4Roq7r68SWORjZ1sAoSIF2sPCjlx8EXv9E93cE\ndZD25\/a2hfHTJbXPFUhLKrHb0IOo\/WJbRaT\/hXbyuvdgjTl\/r47DrGS9c9fPoAtk\nLMGAmiaNa0BG0LPmv7H4SuRDdFNIjtsRJBFMgnfS3QXYr81u44EtqOplPJhqVP1q\nC8884e5ST6X\/R3dKaWmgiYpIviL6xExiaH3FOL9DWI\/b2+Vd+QM2MMcCAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
                                 "type" : "RSA_PEM"
@@ -61,7 +61,7 @@
                             "publicKey" : "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEAkeYtzyK6I9BNjB5MOBfbO7\/EAK1orGj\nzicNsAWY5t+6tDB9MY\/1datWY5LKOfmWZxmn58VE+K4XZCSQWa\/nZg==\n-----END PUBLIC KEY-----\n"
                         },
                         "minerInfo": {
-                            "url" :             "http:\/\/127.0.0.1:9092",
+                            "url" :             "https:\/\/vol9092.fgcdev.com",
                             "key" : {
                                 "publicKey" : "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAwGP5yFColzJa6KL\/La0pusS+RgmJRumhJb00Cs3DPGauZUlvfhVs\nRoCPmK+RMPXI+JFtTnSXacTq11YN1SAMUomyVvsg5JDzIuwZUxHdCAwP37V5Xv7F\nss8\/hwW2HgQpOChooRHuXABeh7KJ\/yH13NcCs2DGhgInj\/bU3bmNVhQaLs1\/1MRF\nDg5DznvmezV8C\/cOeszdMTn2vH8Ug5eSJ\/wuVoE4YXSA9WT53ifByHdngkevDwjT\n8XEamXr57mjhRcL+aJ8VoFS0OSk\/3BGof1FyRj0xw050+P09VGyToPA31ILrmUim\nmmRXYiRPnn4Ve+Jwa4Lcn2E7lT24Z4+Asw67GSsuz0EtBQ8JkxhCIKKNWfbD\/lKf\nMwqHIc\/vsl2qwQWc2L659f\/7Lwaqje5npNC8g\/Sa6b8iSk4y6FxwM5mH2vyfetgO\n32E4AkrCLcqd\/Auo6\/ZQidqkDVwne4N7hqny6m5nyUl7iVZ8zE8s5ATFS+3wx6zU\nC588ZWPPkrqGHBh9D83xNXwplExjvzWNe1bvbfblz9Kq0GFPGQHfHvMAGBxXffE4\n7eUMdRGMghVxw+k59az\/Z3WhhPlIhOoUiKO+W7oAfxzCEItmaY+sIVVLv9XQpJLB\nH2fWIvDA8Lrwvj6XFRlnGZX4vM4g2u2tz1tlcaHz0EaCTx7Q2P\/MQvkCAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
                                 "type" : "RSA_PEM"
@@ -81,7 +81,7 @@
                             "publicKey" : "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEAkeYtzyK6I9BNjB5MOBfbO7\/EAK1orGj\nzicNsAWY5t+6tDB9MY\/1datWY5LKOfmWZxmn58VE+K4XZCSQWa\/nZg==\n-----END PUBLIC KEY-----\n"
                         },
                         "minerInfo": {
-                            "url" :             "http:\/\/127.0.0.1:9093",
+                            "url" :             "https:\/\/vol9093.fgcdev.com",
                             "key" : {
                                 "publicKey" : "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAnSKHCGZdA2hdlhqDxZ+CIgnO9fYZv4sO6UDvNm9aAXhdl62LosX5\nAkxsWMmt4vuf2XFSUuwBHwJVQj1JT9JJYrWlZ8C02+R1p7mkaFHy8zUs1Q2uQjKY\nro2BjPAaJ299HZl863tBYv5sNtjzbgu9U3SoZClD1pzI2\/ac08B3bg4RYRvmytMY\nVuQeSNJsp39yb1O8ghF9oQ2Yrq9X+QiAv\/Q8laDIPUeBMWbWnlzRstH5\/vUyPL3r\n2vbj0Z1F4w+3oW0zMhAuX\/I37VS+uv9LC0PbwKap1rcUeksPNwCe1mUw++wxVSGs\nN6WUUy4kGwB9ICxOXZtTiA2G9CtCnd70cJc8YbFxg2ZsdSvhuMwN1LK83tHrqZYH\ngjxgCr9waoGy85Lfi6FEUyiVi7MHpYZvd1U4+FIzlPN3NsJKOGvFCDn6if2rxXU\/\nzHj3oQHuwX5q1XE7NI2Xkoolpl8DYNZktlLGX8SmvEF1fUexmqBt0xjVAEOwi\/IS\nOL5nZvtBoFdhkT9CioIeZkIuCUu5D\/GcbuyY61JqaQr5i4GmYh1cTPI8GG2sG8+x\n6JmB0zZCH3CwgC\/s9KgpexMndBrZMerO8OJEMME5FjaGxVEKA6mdY6bu\/suGgYZV\nqtgx\/4zqf\/LbxIbsR0V8FGm9OzsWx9clGncOVKDNCvHXLZrSgCWB+v0CAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
                                 "type" : "RSA_PEM"

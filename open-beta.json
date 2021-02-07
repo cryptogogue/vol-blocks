@@ -14,7 +14,7 @@
 
                 "accounts" : [
                     {
-                        "grant" : 0,
+                        "grant" : 1000000000,
                         "key" : {
                             "groupName" : "secp256k1",
                             "publicKey" : "0393BD2F4B705E8AA68B48AD5C54582B233632029BFB64925C860FE3B70A560E65",

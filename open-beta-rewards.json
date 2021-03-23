@@ -7,7 +7,7 @@
 
                 "identity" :                    "VOLITION_OPEN_BETA_REWARDS",
                 "maxBlockWeight" :              1024,
-                "blockDelayInSeconds" :         30,
+                "blockDelayInSeconds" :         1,
                 "rewriteWindowInSeconds" :      300,
 
                 "totalVOL" :                    100000000000,
@@ -84,6 +84,10 @@
                     "type" : "path",
                     "children" : {
                         "BETA_GET_DECK": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "OPEN_ACCOUNT": {
                             "type": "boolean",
                             "value": true
                         },

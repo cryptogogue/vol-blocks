@@ -7,7 +7,7 @@
 
                 "identity" :                    "VOLITION_OPEN_BETA_REWARDS",
                 "maxBlockWeight" :              1024,
-                "blockDelayInSeconds" :         1,
+                "blockDelayInSeconds" :         20,
                 "rewriteWindowInSeconds" :      300,
 
                 "totalVOL" :                    100000000000,

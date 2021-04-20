@@ -11,7 +11,7 @@
                 "rewriteWindowInSeconds" :      300,
 
                 "totalVOL" :                    100000000000,
-                "prizePool" :                   0,
+                "prizePool" :                   1000000000,
 
                 "accounts" : [
                     {

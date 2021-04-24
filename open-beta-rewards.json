@@ -5,6 +5,8 @@
 
                 "type" : "GENESIS",
 
+                "version" : 1,
+
                 "identity" :                    "VOLITION_OPEN_BETA_REWARDS",
                 "maxBlockWeight" :              1024,
                 "blockDelayInSeconds" :         20,

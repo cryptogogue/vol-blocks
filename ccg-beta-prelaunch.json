@@ -1,24 +1,27 @@
 {
-    "height" : 0,
-    "time" : "1970-01-01T00:00:00UTC",
     "transactions" : [
         {
             "bodyIn" : {
 
                 "type" : "GENESIS",
 
-                "identity" :                    "VOLITION_OPEN_BETA",
+                "version" : 0,
+
+                "identity" :                    "VOLITION_CCG_BETA_PRELAUNCH",
                 "maxBlockWeight" :              1024,
-                "blockDelayInSeconds" :         30,
+                "blockDelayInSeconds" :         20,
                 "rewriteWindowInSeconds" :      300,
+
+                "totalVOL" :                    100000000000,
+                "prizePool" :                   1000000000,
 
                 "accounts" : [
                     {
-                        "grant" : 1000000000,
+                        "grant" : 0,
                         "key" : {
-                            "groupName" : "secp256k1",
-                            "publicKey" : "0393BD2F4B705E8AA68B48AD5C54582B233632029BFB64925C860FE3B70A560E65",
-                            "type" : "EC_HEX"
+                            "type": "EC_HEX",
+                            "groupName": "secp256k1",
+                            "publicKey": "0280EAED78822991B093A2C1270354406E567CA2C86AC488B272FCB4A8B1244D66"
                         },
                         "minerInfo" : {
                             "key" : {
@@ -33,8 +36,43 @@
                             }
                         },
                         "name" : "beta"
+                    },
+                    {
+                        "grant" : 0,
+                        "key" : {
+                            "type": "EC_HEX",
+                            "groupName": "secp256k1",
+                            "publicKey": "0264C4F16B973EC3D95E12B1DF80133AF14E30AC142EA656354B8CD41E54006878"
+                        },
+                        "name" : "bank"
                     }
                 ]
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_MONETARY_POLICY",
+                "monetaryPolicy" : {
+
+                    "fixedMiningReward" :   100000,
+                    "miningTax" :           { "factor" : 1000, "integer" : 25 }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_PAYOUT_POLICY",
+                "payoutPolicy" : {
+                    "shares" : {
+                        "bank" : 100
+                    }
+                }
             }
         },
         {
@@ -48,6 +86,10 @@
                     "type" : "path",
                     "children" : {
                         "BETA_GET_DECK": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "OPEN_ACCOUNT": {
                             "type": "boolean",
                             "value": true
                         },

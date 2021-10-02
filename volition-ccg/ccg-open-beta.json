@@ -5,8 +5,6 @@
 
                 "type" : "GENESIS",
 
-                "version" : 0,
-
                 "identity" :                    "VOLITION_OPEN_BETA",
                 "maxBlockWeight" :              1024,
                 "blockDelayInSeconds" :         20,
@@ -45,6 +43,15 @@
                             "publicKey": "0264C4F16B973EC3D95E12B1DF80133AF14E30AC142EA656354B8CD41E54006878"
                         },
                         "name" : "bank"
+                    },
+                    {
+                        "grant" : 0,
+                        "key" : {
+                            "type": "EC_HEX",
+                            "groupName": "secp256k1",
+                            "publicKey": "03DFC698487D077A64CE8A597F809F48332440F1846538A7F974794B48A2EAAFC8"
+                        },
+                        "name" : "volbot"
                     }
                 ]
             }
@@ -80,7 +87,91 @@
                     "accountName" : "beta"
                 },
                 "type" :            "SET_ENTITLEMENTS",
-                "name" :            "beta-key",
+                "name" :            "beta-key-policy",
+                "entitlements" : {
+                    "type" : "path",
+                    "children" : {
+                        "BETA_GET_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "BETA_GET_DECK": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "BUY_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "OFFER_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "OPEN_ACCOUNT": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "PUBLISH_SCHEMA": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "REGISTER_MINER": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "RENAME_ACCOUNT": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "RUN_SCRIPT": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "SEND_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "SEND_VOL": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "SET_TERMS_OF_SERVICE": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "UPGRADE_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_ENTITLEMENTS",
+                "name" :            "bank-key-policy",
+                "entitlements" : {
+                    "type" : "path",
+                    "children" : {
+                        "SEND_VOL": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_ENTITLEMENTS",
+                "name" :            "user-key-policy",
                 "entitlements" : {
                     "type" : "path",
                     "children" : {
@@ -126,8 +217,36 @@
                     "accountName" : "beta"
                 },
                 "type" :            "RESTRICT_KEY",
+                "policy" : {
+                    "base" : "beta-key-policy"
+                },
                 "bequest" : {
-                    "base" : "beta-key"
+                    "base" : "user-key-policy"
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "bank"
+                },
+                "type" :            "RESTRICT_KEY",
+                "policy" : {
+                    "base" : "bank-key-policy"
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "volbot"
+                },
+                "type" :            "RESTRICT_KEY",
+                "policy" : {
+                    "base" : "beta-key-policy"
+                },
+                "bequest" : {
+                    "base" : "user-key-policy"
                 }
             }
         }

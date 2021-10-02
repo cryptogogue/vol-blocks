@@ -1,0 +1,135 @@
+{
+    "transactions" : [
+        {
+            "bodyIn" : {
+
+                "type" : "GENESIS",
+
+                "version" : 0,
+
+                "identity" :                    "VOLITION_OPEN_BETA",
+                "maxBlockWeight" :              1024,
+                "blockDelayInSeconds" :         20,
+                "rewriteWindowInSeconds" :      300,
+
+                "totalVOL" :                    100000000000,
+                "prizePool" :                   1000000000,
+
+                "accounts" : [
+                    {
+                        "grant" : 0,
+                        "key" : {
+                            "type": "EC_HEX",
+                            "groupName": "secp256k1",
+                            "publicKey": "0280EAED78822991B093A2C1270354406E567CA2C86AC488B272FCB4A8B1244D66"
+                        },
+                        "minerInfo" : {
+                            "key" : {
+                                "publicKey" : "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAvjnfRbb1\/NiOsB9BUoUV3PDWyiNxglhQ3+OeQ8aVpQmTy5gzjAYX\ncx8y1+NlXwrmt7PZCz85Lmv7w+N8xwLwiK20XQ\/nGelhopuW62z\/pYzJhtOTueFX\nUP42OMwhMv9YrAtQ8Fiq+LrQ1QdDPYYcO2I7U7VOyEB4QMa8j95jINR5225ks\/SI\nCgolrSoUXoIBsKktV2nXAscpuz\/43wykriPbZwX3oQCsGVkOatZjt2lTlQns05c7\nv9\/E4qDDn4MJhZe4CVKXu2MjMkdyPyGBfnZYSkNLhFBuciriTdGBJrinWHmkThsg\ny5dDmiInSQVMOkaV1yXr9+x0W+6pD0mUMZy24DIPvLN37zhV3w+5uT9rdZUskAhN\nvCW4BiR3xTEo3XXb\/2ei9nVAPxF\/jBFSnFPV+yL0sVDXa9v1Nnuy0IARBp4cU3hk\nWjxHfYujnfJt0C+viAl6LZ2dLcr7LPhO7NLON5GaTad+L5j\/zPboMQw1SCrU0Qjn\nvaxhj3+zqPmYL68CTLfpj+2Ao55+s0orzZPnyAqU4lIeJNBb7uaiDyaLoTurOW9n\nxoLyPUs8oijMo23fMFU1aEJ4JeFMDriBsdEiBz4GwRQw6lFZ56N7DHIu++yBYQ4j\nZBESdpI0GG+C6WtYWPlmaBSdEE5Ec1d6USlHIibeMB6Z517MoFENfmUCAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
+                                "type" : "RSA_PEM"
+                            },
+                            "motto" : "",
+                            "url" : "https:\/\/beta.volitionccg.com",
+                            "visage" : {
+                                "hashAlgorithm" : "SHA256",
+                                "signature" : "55dcb56d7a1863d9db241e8c6cf70270c53482cd288b66793a616b1284d396a7a8f38a247f5d111879de1689a22f6e555e783a46adf338606fe787b7f87f4d58ae581a229edbe55abe9c723638f70f848c10626a3b08fa789827c964077f4a957b51ea1903655e2ee249b6d564a20c9f83dd43c6430b6859897edd61e6183884ee41bcc7845232d6b6fe59f6f87c8b7508221e7cb123a4ad13f560eeab8a17a03036a3b169d15ead0042eed03aae6719e9a0eae98d8cf22e78d451386738cd14a2f2be620585a70ba9a69c0f869cbabcc294eecaefa004c4e29dcbfeb62878ee289419dd5fd8d3922e337155649400f0508c2e58a0038b67bd98d15259832dc7773b908998471ffe3cc985a48a0e51b9fd8fe95b6e4f9f86b8bde65328298ecbe6dfca78bd9674d88ddcfd45d8a75add3af5683350b09ca415af1b7ce60215160ca50a8f3bbcd8e6d94ac443070c8eb1eaa315c9da775eae37899e879871d47a61967d7d651ff6e4ed76e388ab57d2808c24a1351fe2392b87574273610aad4cf0f71b144a17c13c1fec0c8dd5db8ee5c3bf476455971c86f885970df416a7359b4f0600e0c53585cc10d99e592394708398bd4540d1208f180739182395b67ad76326988cc6b31e6f437ad7dc41b582baf83536ca444be58aa0cb57c134d1dcc6930af3d564db9bd241d20e367cbff778ab4745f02bc26576f1661ae2360309"
+                            }
+                        },
+                        "name" : "beta"
+                    },
+                    {
+                        "grant" : 0,
+                        "key" : {
+                            "type": "EC_HEX",
+                            "groupName": "secp256k1",
+                            "publicKey": "0264C4F16B973EC3D95E12B1DF80133AF14E30AC142EA656354B8CD41E54006878"
+                        },
+                        "name" : "bank"
+                    }
+                ]
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_MONETARY_POLICY",
+                "monetaryPolicy" : {
+                    "fixedMiningReward" :   100000,
+                    "miningTax" :           { "factor" : 1000, "integer" : 25 }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_PAYOUT_POLICY",
+                "payoutPolicy" : {
+                    "shares" : {
+                        "bank" : 100
+                    }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_ENTITLEMENTS",
+                "name" :            "beta-key",
+                "entitlements" : {
+                    "type" : "path",
+                    "children" : {
+                        "BUY_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "OFFER_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "OPEN_ACCOUNT": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "RENAME_ACCOUNT": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "RUN_SCRIPT": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "SEND_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "SEND_VOL": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "UPGRADE_ASSETS": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "RESTRICT_KEY",
+                "bequest" : {
+                    "base" : "beta-key"
+                }
+            }
+        }
+    ]
+}

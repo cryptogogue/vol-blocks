@@ -64,7 +64,7 @@
                 "type" :            "SET_MONETARY_POLICY",
                 "monetaryPolicy" : {
                     "fixedMiningReward" :   100000,
-                    "miningTax" :           { "factor" : 1000, "integer" : 25 }
+                    "miningTax" :           { "factor" : 1000, "integer" : 50 }
                 }
             }
         },
@@ -77,6 +77,20 @@
                 "payoutPolicy" : {
                     "shares" : {
                         "bank" : 100
+                    }
+                }
+            }
+        },
+        {
+            "bodyIn" : {
+                "maker" : {
+                    "accountName" : "beta"
+                },
+                "type" :            "SET_TRANSACTION_FEE_SCHEDULE",
+                "feeSchedule" : {
+                    "defaultProfile" : {
+                        "profitShare" :     { "factor" : 1000, "integer" : 300 },
+                        "transferTax" :     { "factor" : 1000, "integer" : 50 }
                     }
                 }
             }
@@ -136,6 +150,10 @@
                             "value": true
                         },
                         "SET_TERMS_OF_SERVICE": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "UPDATE_MINER_INFO": {
                             "type": "boolean",
                             "value": true
                         },
@@ -200,6 +218,10 @@
                             "value": true
                         },
                         "SEND_VOL": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "UPDATE_MINER_INFO": {
                             "type": "boolean",
                             "value": true
                         },
